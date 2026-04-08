@@ -1,147 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>VCU x M.A.D Science Internship</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VCU x M.A.D Science Internship</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b132b;
-      color: white;
-    }
+<style>
+html {
+  scroll-behavior: smooth;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px 40px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background: #0a0f1c;
+  color: white;
+}
 
-    header h1 {
-      font-size: 18px;
-    }
+/* NAV */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(10,15,28,0.8);
+  backdrop-filter: blur(10px);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
 
-    nav a {
-      margin-left: 20px;
-      color: #aaa;
-      text-decoration: none;
-    }
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 14px;
+}
 
-    nav a:hover {
-      color: white;
-    }
+nav a:hover {
+  color: white;
+}
 
-    .hero {
-      padding: 80px 40px;
-    }
+/* HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+}
 
-    .hero h2 {
-      font-size: 42px;
-      margin: 0;
-    }
+.hero h1 {
+  font-size: 64px;
+  max-width: 800px;
+  line-height: 1.05;
+}
 
-    .hero p {
-      color: #bbb;
-      max-width: 600px;
-      margin-top: 15px;
-    }
+.hero p {
+  color: #bbb;
+  max-width: 600px;
+  margin-top: 20px;
+  font-size: 18px;
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #f8c630;
-      color: black;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.button {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 14px 22px;
+  background: #f8c630;
+  color: black;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-    .section {
-      padding: 60px 40px;
-    }
+/* SECTIONS */
+.section {
+  padding: 120px 60px;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.section h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
 
-    .card {
-      background: rgba(255,255,255,0.05);
-      padding: 20px;
-      border-radius: 10px;
-    }
+.section p {
+  color: #aaa;
+  max-width: 700px;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #777;
-    }
-  </style>
+/* CARDS */
+.cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.08);
+}
+
+/* BIG FEATURE STRIP */
+.feature {
+  padding: 140px 60px;
+  text-align: center;
+}
+
+.feature h2 {
+  font-size: 48px;
+}
+
+.feature p {
+  margin: auto;
+  color: #aaa;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+  padding: 60px;
+  text-align: center;
+  color: #777;
+}
+
+/* ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>VCU x M.A.D Science</h1>
+  <div><strong>VCU x M.A.D Science</strong></div>
   <nav>
     <a href="#about">About</a>
+    <a href="#research">Research</a>
     <a href="#internships">Internships</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<section class="hero">
-  <h2>VCU x M.A.D Science Internship Program</h2>
+<!-- HERO -->
+<section class="hero fade">
+  <h1>Data-driven discovery for the next generation of scientists.</h1>
   <p>
-    A portfolio concept representing a collaboration between Virginia Commonwealth University and a fictional bioinformatics research lab.
+    A fictional internship collaboration between Virginia Commonwealth University and M.A.D Science,
+    focused on bioinformatics, genomics, and computational research.
   </p>
-  <a class="button" href="#internships">Explore Internships</a>
+  <a href="#internships" class="button">Explore Internships</a>
 </section>
 
-<section id="about" class="section">
-  <h2>About</h2>
-  <p style="color:#aaa;">
-    This program is designed to simulate real-world research experiences in genomics, computational biology, and data science.
+<!-- FEATURE -->
+<section class="feature fade">
+  <h2>Built for VCU students.</h2>
+  <p>
+    Designed to simulate real lab environments, this program blends biology, data science,
+    and research communication into one cohesive experience.
   </p>
 </section>
 
-<section id="internships" class="section">
+<!-- ABOUT -->
+<section id="about" class="section fade">
+  <h2>About the Program</h2>
+  <p>
+    The VCU x M.A.D Science Internship Program is a conceptual research initiative designed
+    to mirror real-world bioinformatics labs. Students gain experience working with genomic
+    data, machine learning models, and scientific storytelling.
+  </p>
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="section fade">
+  <h2>Research Areas</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Genomics</h3>
+      <p>DNA sequencing, variant analysis, and gene discovery.</p>
+    </div>
+
+    <div class="card">
+      <h3>Machine Learning</h3>
+      <p>Predictive modeling for biological datasets.</p>
+    </div>
+
+    <div class="card">
+      <h3>Systems Biology</h3>
+      <p>Understanding complex biological interactions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INTERNSHIPS -->
+<section id="internships" class="section fade">
   <h2>Internship Tracks</h2>
 
   <div class="cards">
     <div class="card">
       <h3>Bioinformatics Intern</h3>
-      <p>Work with genomic data and research analysis.</p>
+      <p>Analyze genomic data and assist in research pipelines.</p>
     </div>
 
     <div class="card">
       <h3>Computational Biology Intern</h3>
-      <p>Analyze biological datasets and models.</p>
+      <p>Work with datasets and modeling frameworks.</p>
     </div>
 
     <div class="card">
-      <h3>Data Visualization Intern</h3>
-      <p>Create dashboards and research visuals.</p>
+      <h3>Visualization Intern</h3>
+      <p>Create dashboards and communicate findings visually.</p>
     </div>
   </div>
 </section>
 
-<section id="contact" class="section">
+<!-- CONTACT -->
+<section id="contact" class="section fade">
   <h2>Contact</h2>
-  <p style="color:#aaa;">
+  <p>
     Richmond, Virginia<br>
-    Portfolio Concept Project
+    VCU x M.A.D Science Initiative<br><br>
+    *This is a fictional portfolio project*
   </p>
 </section>
 
 <footer>
-  © 2026 VCU x M.A.D Science Internship
+  © 2026 VCU x M.A.D Science Internship Program
 </footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
